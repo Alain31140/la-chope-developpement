@@ -1,0 +1,382 @@
+/* ==========================================================
+   QRFeedback V1.0
+   style.css
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --couleur:#7A4300;
+    --fond:#f5f2ed;
+    --carte:#ffffff;
+    --texte:#333;
+    --bordure:#dddddd;
+    --ombre:0 8px 25px rgba(0,0,0,.18);
+
+}
+
+body{
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:var(--fond);
+
+    color:var(--texte);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:25px;
+
+}
+
+
+
+.card{
+
+    width:100%;
+    max-width:520px;
+
+    background:var(--carte);
+
+    border-radius:20px;
+
+    box-shadow:var(--ombre);
+
+    padding:30px;
+
+}
+
+
+
+#logo{
+
+    display:block;
+
+    width:120px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#commerceNom{
+
+    text-align:center;
+
+    color:var(--couleur);
+
+    margin-bottom:10px;
+
+}
+
+
+
+#commerceSlogan{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#666;
+
+}
+
+
+
+#questionnaire{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.question{
+
+    margin-bottom:28px;
+
+}
+
+
+
+.question label{
+
+    display:block;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.stars{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+
+
+.star{
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    color:#cccccc;
+
+    transition:.2s;
+
+}
+
+
+
+.star:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+
+.star.active{
+
+    color:#f6b300;
+
+}
+
+
+
+textarea{
+
+    width:100%;
+
+    height:120px;
+
+    resize:vertical;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    margin-bottom:25px;
+
+    border-radius:10px;
+
+    border:1px solid var(--bordure);
+
+    font-size:15px;
+
+}
+
+
+
+input[type=text]{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    border:1px solid var(--bordure);
+
+    font-size:15px;
+
+}
+
+
+
+.checkbox{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--couleur);
+
+    color:white;
+
+    font-size:18px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.92;
+
+}
+
+
+
+button:active{
+
+    transform:translateY(1px);
+
+}
+
+
+
+#message{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-weight:bold;
+
+    color:green;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    #logo{
+
+        width:90px;
+
+    }
+
+    .star{
+
+        font-size:30px;
+
+    }
+
+}
+
+button:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+.apercu{
+
+    text-align:left;
+
+    white-space:pre-wrap;
+
+    background:#f7f7f7;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-top:20px;
+
+    font-family:monospace;
+
+    color:#333;
+
+}
+.avis-vert {
+    border-left: 8px solid #4CAF50;
+}
+
+.avis-orange {
+    border-left: 8px solid #FF9800;
+}
+
+.avis-rouge {
+    border-left: 8px solid #F44336;
+}
+
+/*==========================================================
+MERCI
+==========================================================*/
+
+.merci-cache{
+    display:none;
+}
+
+.merci-visible{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:70vh;
+}
+
+.merci-contenu{
+    width:100%;
+    text-align:center;
+}
+
+.merci-emoji{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.merci-contenu h1{
+    color:#2E7D32;
+    margin-bottom:20px;
+}
+
+.merci-contenu p{
+    font-size:1.2rem;
+    margin:10px 0;
+}
