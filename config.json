@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+
+  "commerce": {
+    "nom": "La Chope balmanaise",
+    "slogan": "Merci de votre visite !",
+    "logo": "images/logo.png",
+    "email": "danes.alain@gmail.com",
+    "topic_ntfy": "brasserie-avis-developpement"
+  },
+
+  "questions": [
+    "Expérience globale",
+    "Qualité des plats",
+    "Accueil",
+    "Rapidité du service",
+    "Rapport qualité / prix"
+  ]
+}
