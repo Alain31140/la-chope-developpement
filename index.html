@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRFeedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="application">
+
+    <main class="card">
+        <section id="formulaire">
+        <!-- Logo -->
+        <img id="logo" src="images/logo.png" alt="Logo">
+
+        <!-- Commerce -->
+        <h1 id="commerceNom">Nom du commerce</h1>
+        <p id="commerceSlogan">Merci de votre visite !</p>
+
+        <!-- Questionnaire -->
+        <section id="questionnaire"></section>
+
+        <!-- Commentaire -->
+        <label for="commentaire">Votre commentaire</label>
+        <textarea
+            id="commentaire"
+            placeholder="Dites-nous ce que vous avez pensé de votre visite..."
+        ></textarea>
+
+        <!-- Prénom -->
+        <label for="prenom">Votre prénom (facultatif)</label>
+        <input
+            id="prenom"
+            type="text"
+            placeholder="Votre prénom"
+        >
+
+        <!-- Contact -->
+        <label class="checkbox">
+            <input id="contact" type="checkbox">
+            Je souhaite être recontacté.
+        </label>
+
+        <!-- Téléphone -->
+        <div id="phoneBlock" style="display:none;">
+            <label for="phone">Téléphone</label>
+            <input
+                id="phone"
+                type="tel"
+                placeholder="06 12 34 56 78"
+            >
+        </div>
+
+        <!-- Email -->
+        <div id="emailBlock" style="display:none;">
+            <label for="email">Email</label>
+            <input
+                id="email"
+                type="email"
+                placeholder="exemple@mail.com"
+            >
+        </div>
+
+        <!-- Bouton -->
+        <button id="btnEnvoyer">Envoyer mon avis</button>
+
+        <!-- Message final -->
+        <div id="message"></div>
+        <!-- Message -->
+        <div id="message"></div>
+
+    </section>
+
+    <section id="merci" class="merci-cache">
+
+        <div class="merci-contenu">
+
+            <div class="merci-emoji">
+                😊
+            </div>
+
+            <h1>
+                Merci pour votre avis !
+            </h1>
+
+            <p>
+                Votre retour a bien été pris en compte.
+            </p>
+
+            <p id="merciCommerce"></p>
+
+        </div>
+
+    </section>
+
+</main>
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
