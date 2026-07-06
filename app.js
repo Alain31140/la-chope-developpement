@@ -21,11 +21,14 @@ async function chargerConfiguration() {
     }
     catch (err) {
 
-        console.error(err);
+        //console.error(err);
 
-        alert("Erreur de chargement du fichier de configuration.");
+        //alert("Erreur de chargement du fichier de configuration.");
+	console.error("ERREUR :", err);
+	alert(err.message);
 
     }
+
 
 }
 
