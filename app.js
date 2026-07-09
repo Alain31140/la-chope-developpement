@@ -2,6 +2,14 @@ let CONFIG = {};
 
 let AVIS = [];
 
+const LABELS_NOTES = {
+    1: { texte: "😞 Très décevant", couleur: "#d32f2f" },
+    2: { texte: "🙁 Décevant", couleur: "#f57c00" },
+    3: { texte: "😐 Correct", couleur: "#fbc02d" },
+    4: { texte: "😊 Très bien", couleur: "#388e3c" },
+    5: { texte: "🤩 Excellent", couleur: "#2e7d32" }
+};
+
 window.addEventListener("DOMContentLoaded", chargerConfiguration);
 
 async function chargerConfiguration() {
@@ -21,15 +29,10 @@ async function chargerConfiguration() {
     }
     catch (err) {
 
-        //console.error(err);
-
-        //alert("Erreur de chargement du fichier de configuration.");
-	console.error("ERREUR :", err);
-	alert(err.message);
+        console.error("ERREUR :", err);
+        alert(err.message);
 
     }
-
-
 }
 
 function initialiser() {
@@ -52,7 +55,6 @@ function initialiser() {
 
     btn.addEventListener("click", envoyer);
 
-    // CONTACT SAFE
     if (contact) {
         contact.addEventListener("change", toggleContactFields);
     }
@@ -123,6 +125,13 @@ function construireQuestionnaire() {
         }
 
         bloc.appendChild(etoiles);
+
+        const aide = document.createElement("div");
+        aide.id = "label-note-" + index;
+        aide.className = "note-label";
+        aide.textContent = "";
+        bloc.appendChild(aide);
+
         zone.appendChild(bloc);
     });
 }
@@ -146,8 +155,15 @@ function selectionner() {
             star.classList.toggle("active", Number(star.dataset.note) <= note);
         });
 
-   document.getElementById("btnEnvoyer").disabled =
-    AVIS.some(v => v === 0);
+    const label = document.getElementById("label-note-" + question);
+
+    if (label && LABELS_NOTES[note]) {
+        label.textContent = LABELS_NOTES[note].texte;
+        label.style.color = LABELS_NOTES[note].couleur;
+    }
+
+    document.getElementById("btnEnvoyer").disabled =
+        AVIS.some(v => v === 0);
 }
 
 /* =========================
@@ -186,7 +202,7 @@ function isValidPhone(phone) {
 
 function envoyer() {
 
-console.log("🚀 TEST ENVOI MAKE");
+    console.log("🚀 TEST ENVOI MAKE");
 
     const commentaire = document.getElementById("commentaire").value.trim();
     const prenom = document.getElementById("prenom").value.trim();
@@ -198,99 +214,99 @@ console.log("🚀 TEST ENVOI MAKE");
 
     if (contact) {
 
-    phone = document.getElementById("phone").value.trim();
-    email = document.getElementById("email").value.trim();
+        phone = document.getElementById("phone").value.trim();
+        email = document.getElementById("email").value.trim();
 
-    if (phone !== "" && !isValidPhone(phone)) {
-        alert("Téléphone invalide");
-        return;
-    }
+        if (phone !== "" && !isValidPhone(phone)) {
+            alert("Téléphone invalide");
+            return;
+        }
 
-    if (email !== "" && !isValidEmail(email)) {
-        alert("Email invalide");
-        return;
+        if (email !== "" && !isValidEmail(email)) {
+            alert("Email invalide");
+            return;
+        }
     }
-}
 
     if (AVIS.some(v => v === 0)) {
-    alert("Merci de noter toutes les questions.");
-    return;
-}
+        alert("Merci de noter toutes les questions.");
+        return;
+    }
 
     let total = 0;
     AVIS.forEach(n => total += Number(n));
 
     const moyenne = total / AVIS.length;
-    const maintenant = new Date();
-    let pastille = moyenne >= 4 ? "🟢" : moyenne >= 3 ? "🟡" : "🔴";
 
     const moyenneFr = moyenne.toLocaleString("fr-FR", {
-  	minimumFractionDigits: 1,
-  	maximumFractionDigits: 1
-	});
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1
+    });
+
+    const maintenant = new Date();
+
+    const pastille = moyenne >= 4 ? "🟢" : moyenne >= 3 ? "🟡" : "🔴";
 
     let resultat = {
 
-    	commerce: CONFIG.commerce.nom,
+        commerce: CONFIG.commerce.nom,
 
-    	emailCommerce: CONFIG.commerce.email,
+        emailCommerce: CONFIG.commerce.email,
 
-    	date: maintenant.toLocaleString("fr-FR"),
+        date: maintenant.toLocaleString("fr-FR"),
         date_jour: maintenant.toLocaleDateString("fr-FR"),
 
-    	notes: AVIS,
+        notes: AVIS,
 
         moyenne: moyenneFr,
 
-    	pastille,
+        pastille,
 
-    	commentaire,
+        commentaire,
 
-   	prenom,
+        prenom,
 
-    	contact,
+        contact,
 
-    	contactTexte: contact ? "Oui" : "Non",
-		
-    	phone,
+        contactTexte: contact ? "Oui" : "Non",
 
-    	email
+        phone,
 
-	};
+        email
 
+    };
 
-console.log("👉 ENVOI WEBHOOK");
-console.log(JSON.stringify(resultat, null, 2));
-
+    console.log("👉 ENVOI WEBHOOK");
+    console.log(JSON.stringify(resultat, null, 2));
 
     console.log("RESULTAT:", resultat);
 
-console.log("🚀 ENVOI MAKE START");
+    console.log("🚀 ENVOI MAKE START");
 
-fetch(CONFIG.commerce.make_webhook, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(resultat)
-})
-.then(response => {
-    console.log("📡 STATUS:", response.status);
-    console.log("📡 ENVOI OK");
-})
-.catch(err => {
-    console.log("❌ ERREUR MAKE:", err);
-});
-console.log("📤 requête envoyée");
+    fetch(CONFIG.commerce.make_webhook, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(resultat)
+    })
+    .then(response => {
+        console.log("📡 STATUS:", response.status);
+        console.log("📡 ENVOI OK");
+    })
+    .catch(err => {
+        console.log("❌ ERREUR MAKE:", err);
+    });
 
-    // UI success
+    console.log("📤 requête envoyée");
+
     document.getElementById("formulaire").style.display = "none";
 
-document.getElementById("merciCommerce").textContent =
-    "Toute l'équipe de " +
-    CONFIG.commerce.nom +
-    " vous remercie de votre visite.";
+    document.getElementById("merciCommerce").textContent =
+        "Toute l'équipe de " +
+        CONFIG.commerce.nom +
+        " vous remercie de votre visite.";
 
-document.getElementById("merci").classList.remove("merci-cache");
-document.getElementById("merci").classList.add("merci-visible");
+    document.getElementById("merci").classList.remove("merci-cache");
+    document.getElementById("merci").classList.add("merci-visible");
 }
