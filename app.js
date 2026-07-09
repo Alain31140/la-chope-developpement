@@ -87,6 +87,7 @@ function afficherCommerce() {
 function construireQuestionnaire() {
 
     const zone = document.getElementById("questionnaire");
+    zone.innerHTML = "";
 
     CONFIG.questions.forEach((question, index) => {
 
@@ -124,18 +125,17 @@ function construireQuestionnaire() {
             etoiles.appendChild(star);
         }
 
+        const aide = document.createElement("span");
+        aide.id = "label-note-" + index;
+        aide.className = "note-label";
+        aide.textContent = "";
+
+        etoiles.appendChild(aide);
         bloc.appendChild(etoiles);
 
-        const aide = document.createElement("span");
-	aide.id = "label-note-" + index;
-	aide.className = "note-label";
-	aide.textContent = "";
-
-	etoiles.appendChild(aide);
-	bloc.appendChild(etoiles);
+        zone.appendChild(bloc);
     });
 }
-
 /* =========================
    STARS
 ========================= */
