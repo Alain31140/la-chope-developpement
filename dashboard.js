@@ -7,7 +7,7 @@ async function chargerDashboard() {
   document.querySelector("header p").textContent =
     data.commerce.slogan + " — MAJ : " + data.maj;
 
-  document.getElementById("note").textContent = data.kpi.note.toFixed(1);
+  document.getElementById("note").textContent = data.kpi.note.toFixed(1) + " / 5";
   document.getElementById("satisfaction").textContent = data.kpi.satisfaction + " %";
   document.getElementById("avis").textContent = data.kpi.avis;
 
@@ -17,9 +17,9 @@ async function chargerDashboard() {
   const tendance = data.kpi.tendance;
 
   document.getElementById("tendance").textContent =
-    tendance > 0 ? "+" + tendance.toFixed(1) :
-    tendance < 0 ? tendance.toFixed(1) :
-    "0,0";
+  (tendance > 0 ? "+" + tendance.toFixed(1) :
+   tendance < 0 ? tendance.toFixed(1) :
+   "0,0") + " pt";
 
   document.getElementById("trendIcon").textContent =
     tendance > 0 ? "📈" :
@@ -31,10 +31,10 @@ async function chargerDashboard() {
     tendance < 0 ? "Baisse" :
     "Stable";
 
-  document.getElementById("cuisine").textContent = data.criteres.cuisine.toFixed(1);
-  document.getElementById("accueil").textContent = data.criteres.accueil.toFixed(1);
-  document.getElementById("rapidite").textContent = data.criteres.rapidite.toFixed(1);
-  document.getElementById("prix").textContent = data.criteres.prix.toFixed(1);
+  document.getElementById("cuisine").textContent = data.criteres.cuisine.toFixed(1) + " / 5";
+document.getElementById("accueil").textContent = data.criteres.accueil.toFixed(1) + " / 5";
+document.getElementById("rapidite").textContent = data.criteres.rapidite.toFixed(1) + " / 5";
+document.getElementById("prix").textContent = data.criteres.prix.toFixed(1) + " / 5";
 
   dessinerGraphique(data.historique);
 }
