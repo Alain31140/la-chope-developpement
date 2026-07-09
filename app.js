@@ -230,7 +230,8 @@ console.log("🚀 TEST ENVOI MAKE");
 
     	emailCommerce: CONFIG.commerce.email,
 
-    	date: new Date().toLocaleString(),
+    	date: maintenant.toLocaleString("fr-FR"),
+        date_jour: maintenant.toLocaleDateString("fr-FR"),
 
     	notes: AVIS,
 
