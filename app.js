@@ -221,7 +221,7 @@ console.log("🚀 TEST ENVOI MAKE");
     AVIS.forEach(n => total += Number(n));
 
     const moyenne = total / AVIS.length;
-
+    const maintenant = new Date();
     let pastille = moyenne >= 4 ? "🟢" : moyenne >= 3 ? "🟡" : "🔴";
 
     let resultat = {
