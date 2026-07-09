@@ -1,0 +1,52 @@
+{
+  "commerce": {
+    "nom": "La Chope balmanaise",
+    "slogan": "Tableau de bord expérience client"
+    "logo": "images/Logo-La-chope.png",
+    "slogan": "Tableau de bord Satisfaction Client"
+  },
+  "maj": "09/07/2026 17:52",
+  "etat": {
+    "label": "🟢 Satisfaisant",
+    "message": "La satisfaction client est bonne aujourd'hui."
+  },
+  "kpi": {
+    "note": 4.3,
+    "satisfaction": 87,
+    "avis": 24,
+    "tendance": 0.2,
+    "pointFort": "😊 Accueil",
+    "ameliorer": "🐢🐇 Rapidité"
+  },
+  "criteres": {
+    "cuisine": 4.5,
+    "accueil": 4.8,
+    "rapidite": 3.9,
+    "prix": 4.2
+  },
+  "historique": [
+    { "date": "06/07", "note": 3.8, "avis": 6 },
+    { "date": "07/07", "note": 3.5, "avis": 20 },
+    { "date": "08/07", "note": 4.1, "avis": 12 },
+    { "date": "09/07", "note": 4.3, "avis": 24 }
+  ],
+  "analyse": [
+    "L'accueil est régulièrement apprécié par les clients.",
+    "La rapidité reste le principal axe d'amélioration.",
+    "La cuisine obtient une note stable et satisfaisante."
+  ],
+  "derniersAvis": [
+    {
+      "note": 4,
+      "texte": "Très bon accueil, service agréable et repas de qualité."
+    },
+    {
+      "note": 3,
+      "texte": "Bon repas mais attente un peu longue."
+    },
+    {
+      "note": 5,
+      "texte": "Excellent moment, équipe très sympathique."
+    }
+  ]
+}

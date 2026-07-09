@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <header>
+    <img id="logo" alt="Logo" class="logo">
+      <h1 id="commerceNom">La Chope balmanaise</h1>
+      <p id="commerceSlogan">Tableau de bord expérience client</p>
+    </div>
+  </header>
+
+  <section class="kpi-grid">
+    <div class="card"><span>⭐</span><strong id="note">--</strong><small>Expérience globale</small></div>
+    <div class="card"><span>👍</span><strong id="satisfaction">--</strong><small>Clients satisfaits</small></div>
+    <div class="card"><span>📝</span><strong id="avis">--</strong><small>Avis du jour</small></div>
+    <div class="card"><span id="trendIcon">➖</span><strong id="tendance">--</strong><small id="trendText">Stable</small></div>
+    <div class="card"><span>🏆</span><strong id="pointFort">--</strong><small>Point fort</small></div>
+    <div class="card"><span>🚨</span><strong id="ameliorer">--</strong><small>À améliorer</small></div>
+  </section>
+
+  <section class="criteria">
+    <div><span>🍽️ Cuisine</span><strong id="cuisine">--</strong></div>
+    <div><span>😊 Accueil</span><strong id="accueil">--</strong></div>
+    <div><span>🐢🐇 Rapidité</span><strong id="rapidite">--</strong></div>
+    <div><span>💶 Rapport Q/P</span><strong id="prix">--</strong></div>
+  </section>
+
+  <section class="graph">
+    <h2>📈 Évolution de l’expérience globale</h2>
+    <div id="graphPlaceholder">Graphique à connecter</div>
+  </section>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
