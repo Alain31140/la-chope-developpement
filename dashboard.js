@@ -26,6 +26,20 @@ async function chargerDashboard() {
     tendance < 0 ? "📉" :
     "➖";
 
+const tendanceCard = document.getElementById("tendance").parentElement;
+
+tendanceCard.classList.remove("trend-up", "trend-down", "trend-stable");
+
+if (tendance > 0) {
+    tendanceCard.classList.add("trend-up");
+}
+else if (tendance < 0) {
+    tendanceCard.classList.add("trend-down");
+}
+else {
+    tendanceCard.classList.add("trend-stable");
+}
+
   document.getElementById("trendText").textContent =
     tendance > 0 ? "Hausse" :
     tendance < 0 ? "Baisse" :
