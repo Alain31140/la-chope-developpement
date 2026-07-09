@@ -126,13 +126,13 @@ function construireQuestionnaire() {
 
         bloc.appendChild(etoiles);
 
-        const aide = document.createElement("div");
-        aide.id = "label-note-" + index;
-        aide.className = "note-label";
-        aide.textContent = "";
-        bloc.appendChild(aide);
+        const aide = document.createElement("span");
+	aide.id = "label-note-" + index;
+	aide.className = "note-label";
+	aide.textContent = "";
 
-        zone.appendChild(bloc);
+	etoiles.appendChild(aide);
+	bloc.appendChild(etoiles);
     });
 }
 

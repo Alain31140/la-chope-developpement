@@ -92,7 +92,7 @@ body{
 
     text-align:center;
 
-    margin-bottom:30px;
+    margin-bottom:6px;
 
     color:#666;
 
@@ -381,7 +381,7 @@ MERCI
     margin:10px 0;
 }
 .intro-notation {
-    margin: 12px 0 18px;
+    margin: 8px 0 16px;
     padding: 10px 8px;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
@@ -438,4 +438,11 @@ MERCI
 
 .echelle-texte.vert {
     color: #2e7d32;
+}
+.note-label {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    vertical-align: middle;
 }
