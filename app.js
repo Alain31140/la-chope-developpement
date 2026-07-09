@@ -224,6 +224,11 @@ console.log("🚀 TEST ENVOI MAKE");
     const maintenant = new Date();
     let pastille = moyenne >= 4 ? "🟢" : moyenne >= 3 ? "🟡" : "🔴";
 
+    const moyenneFr = moyenne.toLocaleString("fr-FR", {
+  	minimumFractionDigits: 1,
+  	maximumFractionDigits: 1
+	});
+
     let resultat = {
 
     	commerce: CONFIG.commerce.nom,
@@ -234,6 +239,8 @@ console.log("🚀 TEST ENVOI MAKE");
         date_jour: maintenant.toLocaleDateString("fr-FR"),
 
     	notes: AVIS,
+
+        moyenne: moyenneFr,
 
     	moyenne: moyenne.toFixed(1),
 
