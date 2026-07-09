@@ -8,7 +8,7 @@ async function chargerConfiguration() {
 
     try {
 
-        const response = await fetch("config.json");
+        const response = await fetch("config.json?v=" + Date.now());
 
         if (!response.ok) {
             throw new Error("Impossible de charger config.json");
@@ -241,8 +241,6 @@ console.log("🚀 TEST ENVOI MAKE");
     	notes: AVIS,
 
         moyenne: moyenneFr,
-
-    	moyenne: moyenne.toFixed(1),
 
     	pastille,
 
