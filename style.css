@@ -380,3 +380,62 @@ MERCI
     font-size:1.2rem;
     margin:10px 0;
 }
+.intro-notation {
+    margin: 12px 0 18px;
+    padding: 10px 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.intro-notation h2 {
+    margin: 0 0 8px;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #333;
+}
+
+.intro-notation p {
+    margin: 0 0 12px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.echelle-notes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    align-items: start;
+    text-align: center;
+}
+
+.echelle-etoiles {
+    font-size: 0.78em;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.echelle-texte {
+    margin-top: 3px;
+    font-size: 0.68em;
+    font-weight: 600;
+    line-height: 1.05;
+    color: #555;
+}
+
+.echelle-texte.rouge {
+    color: #d32f2f;
+}
+
+.echelle-texte.orange {
+    color: #f57c00;
+}
+
+.echelle-texte.jaune {
+    color: #b8860b;
+}
+
+.echelle-texte.vert {
+    color: #2e7d32;
+}
