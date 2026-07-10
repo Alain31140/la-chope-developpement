@@ -4,7 +4,7 @@
   "commerce": {
     "nom": "La Chope balmanaise (Dev 12)",
     "slogan": "Merci de votre visite !",
-    "logo": "images/logo.png",
+    "logo": "images/Logo-La-chope.png",
     "email": "danes.alain@gmail.com",
     "topic_ntfy": "brasserie-avis-developpement",
     "make_webhook": "https://hook.eu1.make.com/hxr7hnopwi3s4kvlmewlv16w4gm53cky"
