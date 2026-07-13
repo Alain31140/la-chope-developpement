@@ -33,9 +33,138 @@
     <div><span>💶 Rapport Q/P</span><strong id="prix">--</strong></div>
   </section>
 
-  <section class="graph">
+    <section class="graph">
     <h2>📈 Évolution de l’expérience globale</h2>
     <div id="graphPlaceholder">Graphique à connecter</div>
+  </section>
+
+
+  <!-- ===================================== -->
+  <!-- CE QUE DISENT LES CLIENTS             -->
+  <!-- ===================================== -->
+
+  <section class="commentaires-section">
+
+    <h2>💬 Ce que disent les clients</h2>
+
+    <div class="commentaires-filtres">
+
+      <button
+        type="button"
+        class="filtre-commentaire actif"
+        data-vue="globale">
+        Vue globale
+      </button>
+
+      <button
+        type="button"
+        class="filtre-commentaire"
+        data-vue="positif">
+        👍 Ce qui plaît
+      </button>
+
+      <button
+        type="button"
+        class="filtre-commentaire"
+        data-vue="negatif">
+        ⚠️ À améliorer
+      </button>
+
+    </div>
+
+
+    <!-- VUE GLOBALE -->
+
+    <div
+      id="vueGlobale"
+      class="vue-commentaires active">
+
+      <div class="sentiments-grid">
+
+        <div class="sentiment-card positif">
+          <span>👍 Positifs</span>
+          <strong id="pourcentagePositif">-- %</strong>
+        </div>
+
+        <div class="sentiment-card mitige">
+          <span>😐 Mitigés</span>
+          <strong id="pourcentageMitige">-- %</strong>
+        </div>
+
+        <div class="sentiment-card negatif">
+          <span>⚠️ Négatifs</span>
+          <strong id="pourcentageNegatif">-- %</strong>
+        </div>
+
+        <div class="sentiment-card indetermine">
+          <span>❔ Non déterminés</span>
+          <strong id="pourcentageNonDetermine">-- %</strong>
+        </div>
+
+      </div>
+
+      <div class="synthese-grid">
+
+        <article class="synthese-card point-fort">
+          <h3>🏆 Principal point fort</h3>
+          <strong id="commentairePointFort">--</strong>
+          <p id="commentairePointFortMentions">
+            -- mentions positives
+          </p>
+        </article>
+
+        <article class="synthese-card irritant">
+          <h3>🚨 Principal irritant</h3>
+          <strong id="commentaireIrritant">--</strong>
+          <p id="commentaireIrritantMentions">
+            -- mentions négatives
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- VUE POSITIVE -->
+
+    <div
+      id="vuePositive"
+      class="vue-commentaires">
+
+      <article class="liste-termes-card positif">
+
+        <h3>👍 Termes positifs les plus fréquents</h3>
+
+        <div
+          id="listeTermesPositifs"
+          class="liste-termes">
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- VUE À AMÉLIORER -->
+
+    <div
+      id="vueNegative"
+      class="vue-commentaires">
+
+      <article class="liste-termes-card negatif">
+
+        <h3>⚠️ Termes négatifs les plus fréquents</h3>
+
+        <div
+          id="listeTermesNegatifs"
+          class="liste-termes">
+        </div>
+
+      </article>
+
+    </div>
+
   </section>
 
 </div>
