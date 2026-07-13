@@ -51,6 +51,8 @@ document.getElementById("rapidite").textContent = data.criteres.rapidite.toFixed
 document.getElementById("prix").textContent = data.criteres.prix.toFixed(1) + " / 5";
 
   dessinerGraphique(data.historique);
+  afficherAnalyseCommentaires(data.commentaires);
+  initialiserFiltresCommentaires();
 }
 
 function dessinerGraphique(historique) {
@@ -126,6 +128,137 @@ function dessinerGraphique(historique) {
   });
 
   zone.appendChild(svg);
+}
+
+function afficherAnalyseCommentaires(commentaires) {
+
+  if (!commentaires) {
+    return;
+  }
+
+  document.getElementById("pourcentagePositif").textContent =
+    commentaires.pourcentagePositif + " %";
+
+  document.getElementById("pourcentageMitige").textContent =
+    commentaires.pourcentageMitige + " %";
+
+  document.getElementById("pourcentageNegatif").textContent =
+    commentaires.pourcentageNegatif + " %";
+
+  document.getElementById("pourcentageNonDetermine").textContent =
+    commentaires.pourcentageNonDetermine + " %";
+
+
+  document.getElementById("commentairePointFort").textContent =
+    commentaires.pointFort.theme;
+
+  document.getElementById(
+    "commentairePointFortMentions"
+  ).textContent =
+    commentaires.pointFort.mentions +
+    " mentions positives";
+
+
+  document.getElementById("commentaireIrritant").textContent =
+    commentaires.irritant.theme;
+
+  document.getElementById(
+    "commentaireIrritantMentions"
+  ).textContent =
+    commentaires.irritant.mentions +
+    " mentions négatives";
+
+
+  afficherListeTermes(
+    "listeTermesPositifs",
+    commentaires.termesPositifs
+  );
+
+  afficherListeTermes(
+    "listeTermesNegatifs",
+    commentaires.termesNegatifs
+  );
+}
+
+
+function afficherListeTermes(idZone, termes) {
+
+  const zone = document.getElementById(idZone);
+
+  if (!zone) {
+    return;
+  }
+
+  zone.innerHTML = "";
+
+  if (!termes || termes.length === 0) {
+    zone.textContent = "Pas encore de données.";
+    return;
+  }
+
+  termes.forEach(item => {
+
+    const badge = document.createElement("div");
+    badge.className = "terme-badge";
+
+    const terme = document.createElement("strong");
+    terme.textContent = item.terme;
+
+    const mentions = document.createElement("span");
+    mentions.textContent =
+      item.mentions +
+      (item.mentions > 1 ? " mentions" : " mention");
+
+    badge.appendChild(terme);
+    badge.appendChild(mentions);
+
+    zone.appendChild(badge);
+  });
+}
+
+
+function initialiserFiltresCommentaires() {
+
+  const boutons =
+    document.querySelectorAll(".filtre-commentaire");
+
+  boutons.forEach(bouton => {
+
+    bouton.addEventListener("click", function () {
+
+      boutons.forEach(element => {
+        element.classList.remove("actif");
+      });
+
+      document
+        .querySelectorAll(".vue-commentaires")
+        .forEach(vue => {
+          vue.classList.remove("active");
+        });
+
+      this.classList.add("actif");
+
+      const vueDemandee = this.dataset.vue;
+
+      if (vueDemandee === "globale") {
+        document
+          .getElementById("vueGlobale")
+          .classList.add("active");
+      }
+
+      if (vueDemandee === "positif") {
+        document
+          .getElementById("vuePositive")
+          .classList.add("active");
+      }
+
+      if (vueDemandee === "negatif") {
+        document
+          .getElementById("vueNegative")
+          .classList.add("active");
+      }
+    });
+  });
 }
 
 chargerDashboard();
