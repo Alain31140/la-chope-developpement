@@ -4,31 +4,26 @@
     "logo": "images/Logo-La-chope.png",
     "slogan": "Tableau de bord Satisfaction Client"
   },
-  "maj": "13/07/2026 07:44",
+  "maj": "14/07/2026 09:04",
   "etat": {
     "label": "🔴 Insatisfaisant",
     "message": "La satisfaction nécessite une attention particulière."
   },
   "kpi": {
-    "note": 1.4,
-    "satisfaction": 0,
-    "avis": 1,
-    "tendance": -2.5,
+    "note": 3.2,
+    "satisfaction": 33,
+    "avis": 6,
+    "tendance": 1.8,
     "pointFort": "😊 Accueil",
-    "ameliorer": "🍽️ Cuisine"
+    "ameliorer": "🐢🐇 Rapidité"
   },
   "criteres": {
-    "cuisine": 1,
-    "accueil": 2,
-    "rapidite": 1,
-    "prix": 2
+    "cuisine": 3.3,
+    "accueil": 3.5,
+    "rapidite": 2.7,
+    "prix": 3.2
   },
   "historique": [
-    {
-      "date": "04/06",
-      "note": 4.3,
-      "avis": 3
-    },
     {
       "date": "05/06",
       "note": 4.2,
@@ -173,21 +168,26 @@
       "date": "09/07",
       "note": 1.4,
       "avis": 1
+    },
+    {
+      "date": "14/07",
+      "note": 3.2,
+      "avis": 6
     }
   ],
   "commentaires": {
-    "total": 100,
+    "total": 103,
     "pourcentagePositif": 51,
     "pourcentageMitige": 6,
     "pourcentageNegatif": 25,
-    "pourcentageNonDetermine": 18,
+    "pourcentageNonDetermine": 17,
     "pointFort": {
       "theme": "🍽️ Cuisine",
-      "mentions": 48
+      "mentions": 51
     },
     "irritant": {
       "theme": "🚦 Service",
-      "mentions": 17
+      "mentions": 19
     },
     "termesPositifs": [
       {
@@ -196,26 +196,26 @@
       },
       {
         "terme": "bon",
-        "mentions": 12
+        "mentions": 13
       },
       {
         "terme": "très bon",
-        "mentions": 11
+        "mentions": 12
       },
       {
         "terme": "correct",
-        "mentions": 8
+        "mentions": 10
       },
       {
         "terme": "parfait",
         "mentions": 7
       },
       {
-        "terme": "gourmand",
-        "mentions": 6
+        "terme": "rapide",
+        "mentions": 7
       },
       {
-        "terme": "rapide",
+        "terme": "gourmand",
         "mentions": 6
       },
       {
@@ -234,7 +234,7 @@
     "termesNegatifs": [
       {
         "terme": "attente",
-        "mentions": 14
+        "mentions": 15
       },
       {
         "terme": "bruyant",
@@ -245,16 +245,16 @@
         "mentions": 7
       },
       {
+        "terme": "froid",
+        "mentions": 7
+      },
+      {
         "terme": "déçu",
         "mentions": 6
       },
       {
-        "terme": "froid",
-        "mentions": 6
-      },
-      {
         "terme": "lent",
-        "mentions": 3
+        "mentions": 4
       },
       {
         "terme": "cher",
@@ -263,22 +263,22 @@
     ]
   },
   "analyse": [
-    "Principal point fort : 🍽️ Cuisine — 48 mentions positives.",
-    "Principal irritant : 🚦 Service — 17 mentions négatives.",
+    "Principal point fort : 🍽️ Cuisine — 51 mentions positives.",
+    "Principal irritant : 🚦 Service — 19 mentions négatives.",
     "51 % des commentaires présentent une tendance positive."
   ],
   "derniersAvis": [
     {
-      "note": 1.4,
-      "texte": "Très déçu, attente longue et erreur dans la commande."
+      "note": 2,
+      "texte": "TEST DEV — Attente trop longue, plat froid et rapport qualité prix décevant. Cependant l'accueil est resté correct."
     },
     {
-      "note": 3,
-      "texte": "Les portions sont un peu petites pour le prix."
+      "note": 3.2,
+      "texte": "TEST DEV — Les plats étaient bons et le personnel sympathique, mais le service était assez lent et nous avons beaucoup attendu."
     },
     {
       "note": 4.8,
-      "texte": "Excellent comme d'habitude, équipe au top."
+      "texte": "TEST DEV — Très bon repas, plats savoureux et accueil chaleureux. Le service était rapide et le prix très correct."
     }
   ]
 }
