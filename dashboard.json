@@ -4,24 +4,24 @@
     "logo": "images/Logo-La-chope.png",
     "slogan": "Tableau de bord Satisfaction Client"
   },
-  "maj": "14/07/2026 09:04",
+  "maj": "14/07/2026 09:20",
   "etat": {
     "label": "🔴 Insatisfaisant",
     "message": "La satisfaction nécessite une attention particulière."
   },
   "kpi": {
-    "note": 3.2,
-    "satisfaction": 33,
-    "avis": 6,
-    "tendance": 1.8,
+    "note": 3.1,
+    "satisfaction": 29,
+    "avis": 7,
+    "tendance": 1.7,
     "pointFort": "😊 Accueil",
     "ameliorer": "🐢🐇 Rapidité"
   },
   "criteres": {
-    "cuisine": 3.3,
-    "accueil": 3.5,
-    "rapidite": 2.7,
-    "prix": 3.2
+    "cuisine": 3.1,
+    "accueil": 3.4,
+    "rapidite": 2.9,
+    "prix": 3.4
   },
   "historique": [
     {
@@ -171,16 +171,16 @@
     },
     {
       "date": "14/07",
-      "note": 3.2,
-      "avis": 6
+      "note": 3.1,
+      "avis": 7
     }
   ],
   "commentaires": {
-    "total": 103,
+    "total": 104,
     "pourcentagePositif": 51,
     "pourcentageMitige": 6,
     "pourcentageNegatif": 25,
-    "pourcentageNonDetermine": 17,
+    "pourcentageNonDetermine": 18,
     "pointFort": {
       "theme": "🍽️ Cuisine",
       "mentions": 51
@@ -269,16 +269,16 @@
   ],
   "derniersAvis": [
     {
+      "note": 3,
+      "texte": "TEST AUTOMATISATION DES AVIS"
+    },
+    {
       "note": 2,
       "texte": "TEST DEV — Attente trop longue, plat froid et rapport qualité prix décevant. Cependant l'accueil est resté correct."
     },
     {
       "note": 3.2,
       "texte": "TEST DEV — Les plats étaient bons et le personnel sympathique, mais le service était assez lent et nous avons beaucoup attendu."
-    },
-    {
-      "note": 4.8,
-      "texte": "TEST DEV — Très bon repas, plats savoureux et accueil chaleureux. Le service était rapide et le prix très correct."
     }
   ]
 }
