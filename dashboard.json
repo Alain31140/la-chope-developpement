@@ -4,31 +4,26 @@
     "logo": "images/Logo-La-chope.png",
     "slogan": "Tableau de bord Satisfaction Client"
   },
-  "maj": "21/07/2026 07:35",
+  "maj": "21/07/2026 12:45",
   "etat": {
     "label": "🟢 Satisfaisant",
     "message": "La satisfaction client est bonne."
   },
   "kpi": {
-    "note": 3.9,
-    "satisfaction": 67,
-    "avis": 3,
-    "tendance": 0,
-    "pointFort": "🐢🐇 Rapidité",
-    "ameliorer": "🍽️ Cuisine"
+    "note": 4,
+    "satisfaction": 100,
+    "avis": 1,
+    "tendance": 0.1,
+    "pointFort": "⚖️ Équilibre",
+    "ameliorer": "✅ RAS"
   },
   "criteres": {
-    "cuisine": 3.7,
-    "accueil": 3.7,
-    "rapidite": 4.3,
-    "prix": 4.3
+    "cuisine": 4,
+    "accueil": 4,
+    "rapidite": 4,
+    "prix": 4
   },
   "historique": [
-    {
-      "date": "09/06",
-      "note": 3.5,
-      "avis": 3
-    },
     {
       "date": "10/06",
       "note": 3.2,
@@ -173,14 +168,19 @@
       "date": "10/07",
       "note": 3.9,
       "avis": 3
+    },
+    {
+      "date": "21/07",
+      "note": 4,
+      "avis": 1
     }
   ],
   "commentaires": {
-    "total": 105,
+    "total": 106,
     "pourcentagePositif": 50,
     "pourcentageMitige": 6,
     "pourcentageNegatif": 25,
-    "pourcentageNonDetermine": 19,
+    "pourcentageNonDetermine": 20,
     "pointFort": {
       "theme": "🍽️ Cuisine",
       "mentions": 51
@@ -269,16 +269,16 @@
   ],
   "derniersAvis": [
     {
+      "note": 4,
+      "texte": "Ça fonctionne?"
+    },
+    {
       "note": 3.6,
       "texte": "mon commentaire"
     },
     {
       "note": 3,
       "texte": "TEST AUTOMATISATION DES AVIS"
-    },
-    {
-      "note": 2,
-      "texte": "TEST DEV — Attente trop longue, plat froid et rapport qualité prix décevant. Cependant l'accueil est resté correct."
     }
   ]
 }
