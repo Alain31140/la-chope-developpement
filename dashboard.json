@@ -4,41 +4,26 @@
     "logo": "images/Logo-La-chope.png",
     "slogan": "Tableau de bord Satisfaction Client"
   },
-  "maj": "14/07/2026 09:20",
+  "maj": "21/07/2026 07:35",
   "etat": {
-    "label": "🔴 Insatisfaisant",
-    "message": "La satisfaction nécessite une attention particulière."
+    "label": "🟢 Satisfaisant",
+    "message": "La satisfaction client est bonne."
   },
   "kpi": {
-    "note": 3.1,
-    "satisfaction": 29,
-    "avis": 7,
-    "tendance": 1.7,
-    "pointFort": "😊 Accueil",
-    "ameliorer": "🐢🐇 Rapidité"
+    "note": 3.9,
+    "satisfaction": 67,
+    "avis": 3,
+    "tendance": 0,
+    "pointFort": "🐢🐇 Rapidité",
+    "ameliorer": "🍽️ Cuisine"
   },
   "criteres": {
-    "cuisine": 3.1,
-    "accueil": 3.4,
-    "rapidite": 2.9,
-    "prix": 3.4
+    "cuisine": 3.7,
+    "accueil": 3.7,
+    "rapidite": 4.3,
+    "prix": 4.3
   },
   "historique": [
-    {
-      "date": "05/06",
-      "note": 4.2,
-      "avis": 4
-    },
-    {
-      "date": "06/06",
-      "note": 3.7,
-      "avis": 2
-    },
-    {
-      "date": "08/06",
-      "note": 3.3,
-      "avis": 2
-    },
     {
       "date": "09/06",
       "note": 3.5,
@@ -166,21 +151,36 @@
     },
     {
       "date": "09/07",
-      "note": 1.4,
-      "avis": 1
+      "note": 3.3,
+      "avis": 4
     },
     {
       "date": "14/07",
-      "note": 3.1,
-      "avis": 7
+      "note": 2.9,
+      "avis": 8
+    },
+    {
+      "date": "10/07",
+      "note": 3.9,
+      "avis": 3
+    },
+    {
+      "date": "10/07",
+      "note": 3.9,
+      "avis": 3
+    },
+    {
+      "date": "10/07",
+      "note": 3.9,
+      "avis": 3
     }
   ],
   "commentaires": {
-    "total": 104,
-    "pourcentagePositif": 51,
+    "total": 105,
+    "pourcentagePositif": 50,
     "pourcentageMitige": 6,
     "pourcentageNegatif": 25,
-    "pourcentageNonDetermine": 18,
+    "pourcentageNonDetermine": 19,
     "pointFort": {
       "theme": "🍽️ Cuisine",
       "mentions": 51
@@ -265,9 +265,13 @@
   "analyse": [
     "Principal point fort : 🍽️ Cuisine — 51 mentions positives.",
     "Principal irritant : 🚦 Service — 19 mentions négatives.",
-    "51 % des commentaires présentent une tendance positive."
+    "50 % des commentaires présentent une tendance positive."
   ],
   "derniersAvis": [
+    {
+      "note": 3.6,
+      "texte": "mon commentaire"
+    },
     {
       "note": 3,
       "texte": "TEST AUTOMATISATION DES AVIS"
@@ -275,10 +279,6 @@
     {
       "note": 2,
       "texte": "TEST DEV — Attente trop longue, plat froid et rapport qualité prix décevant. Cependant l'accueil est resté correct."
-    },
-    {
-      "note": 3.2,
-      "texte": "TEST DEV — Les plats étaient bons et le personnel sympathique, mais le service était assez lent et nous avons beaucoup attendu."
     }
   ]
 }
